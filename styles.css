@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "box1 box2 box2"
+        "box1 box3 box4"
+        "box1 box5 box4"
+        "box6 box6 box6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto 1fr 100px;
+    height: 100vh;
+    gap: 10px;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.box1 { grid-area: box1; background-color: lightcoral; }
+.box2 { 
+    grid-area: box2; 
+    background-color: lightblue; 
+    position: relative;
+}
+.box3 { 
+    grid-area: box3; 
+    background-color: lightgreen; 
+    text-align: left;
+}
+.box4 { grid-area: box4; background-color: lightgreen; }
+.box5 { grid-area: box5; background-color: white; }
+.box6 { 
+    grid-area: box6; 
+    background-color: lightblue; 
+    position: relative; 
+}
+
+.inner-box {
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+.inner-box2 {
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 90%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: underline; 
+    color: blue; 
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: darkblue; 
+}
+
+.disabled a {
+    color: gray; 
+    pointer-events: none;
+    text-decoration: none; 
+}
+
